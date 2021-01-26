@@ -4,6 +4,7 @@
     "description": "Syntax highlighting support for the Step language",
     "version": "0.0.1",
     "publisher" : "OfficeOfSpecialAmusements",
+    "repository" : "https://github.com/ianhorswill/StepSyntaxHighlighting",
     "engines": {
         "vscode": "^1.52.0"
     },
