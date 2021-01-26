@@ -1,0 +1,70 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Step",
+	"fileTypes":["step"],
+	"patterns": [
+		{
+			"name":"comment.line",
+			"begin":"^#\\s+\\[",
+			"end":"\\]$",
+			"patterns": [
+				{
+					"name":"entity.name.function",
+					"match":"[^\\]]*"
+				}
+			]
+		},
+		{ "name":"comment.block", 			"match":"^##\\s*.*" },
+		{ "name":"comment.line", 			"match":"^#\\s*.*" },
+		{ "name":"entity.name.function", 	"match":"^predicate .+\\." },
+		{ "name":"entity.name.function", 	"match":"^task .+\\." },
+		{ "name":"entity.name.function", 	"match":"^fluent .+\\." },
+		{ "name":"entity.name.function", 	"match":"^[A-Z][^:.]*[:.]" },
+		{ "name":"entity.name.function", 	"match":"^initially:" },
+		{ "name":"entity.name.function", 	"match":"^\\[end\\]" },
+		{ "name":"keyword.other", 			"match":"\\?[a-zA-Z\/\\+]+" },
+		{ "name":"keyword.control", 		"match":"\\[end\\]" },
+		{ "name":"keyword.control", 		"match":"\\[e?s\\]" },
+		{ "name":"keyword.control",			"match":"\\[or\\]" },
+		{ "name":"keyword.control",			"match":"\\[else\\]" },
+		{ "name":"keyword.control",			"match":"\\[then\\]" },
+		{ "name":"keyword.control",			"match":"\\[generator\\]" },
+		{ "name":"keyword.control",			"match":"\\[predicate\\]" },
+		{ "name":"keyword.control",			"match":"\\[fluent\\]" },
+		{ "name":"keyword.control",			"match":"\\[remembered\\]" },
+		{ "name":"keyword.control",			"match":"\\[suffix\\]" },
+		{ "name":"keyword.control",			"match":"\\[main\\]" },
+		{ "name":"keyword.control",			"match":"\\[fallible\\]" },
+		{ "name":"keyword.control",			"match":"\\[retriable\\]" },
+		{ "name":"keyword.control",			"match":"\\[randomly\\]" },
+		{ "name":"keyword.control",			"match":"\\[firstOf\\]" },
+		{ "name":"keyword.control",			"match":"\\[sequence\\]" },
+		{ "name":"keyword.control",			"match":"\\[once\\]" },
+		{ "name":"keyword.control",			"match":"\\[case [^\\]]+\\]" },
+		{ "name":"keyword.control",			"match":"\\[cool[^\\[\\]]*\\]" },
+		{
+			"name":"string.interpolated",
+			"begin":"\\[","end":"\\]",
+			"patterns": [
+				{ "include":"#keywords" },
+				{ "include":"#bracketed" }
+			]
+		},
+		{ "name":"invalid.illegal",			"match":"\\]" }
+	],
+	"repository": {
+		"bracketed": {
+			"begin": "\\[","end":"\\]",
+			"patterns": [ { "include":"#bracketed" } ]
+		},
+		"keywords": {
+			"patterns" : [
+				{ "name":"keyword.control", "match":"set"},
+				{ "name":"keyword.control", "match":"add"},
+				{ "name":"keyword.control", "match":"removeNext" }
+			]
+		}
+	},
+	"uuid":"FA4F22B4-180D-417B-B67E-EEEF3F5A9CA4",
+	"scopeName": "source.step"
+}

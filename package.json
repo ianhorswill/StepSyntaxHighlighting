@@ -1,0 +1,26 @@
+{
+    "name": "stepsyntaxhighlighting",
+    "displayName": "Step syntax highlighting",
+    "description": "Syntax highlighting support for the Step language",
+    "version": "0.0.1",
+    "publisher" : "OfficeOfSpecialAmusements",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "step",
+            "aliases": ["Step", "step"],
+            "extensions": [".step"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "step",
+            "scopeName": "source.step",
+            "path": "./syntaxes/step.tmLanguage.json"
+        }]
+    }
+}
