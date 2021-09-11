@@ -26,5 +26,15 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"]
-    ]
+    ],
+    "folding" : {
+        "markers" : {
+            "start" : "^.*:$",
+            "end" : "^\\[end\\]"
+        }
+    },
+    "indentationRules": {
+        "increaseIndentPattern": "^.*:$|\\[case|\\[firstof\\]",
+        "decreaseIndentPattern": "\\[end\\]"
+      }
 }

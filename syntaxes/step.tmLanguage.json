@@ -60,6 +60,7 @@
 		"keywords": {
 			"patterns" : [
 				{ "name":"keyword.control", "match":"set"},
+				{ "name":"keyword.control", "match":"now"},
 				{ "name":"keyword.control", "match":"add"},
 				{ "name":"keyword.control", "match":"removeNext" }
 			]
