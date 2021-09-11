@@ -2,7 +2,7 @@
     "name": "stepsyntaxhighlighting",
     "displayName": "Step syntax highlighting",
     "description": "Syntax highlighting support for the Step language",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher" : "OfficeOfSpecialAmusements",
     "repository" : "https://github.com/ianhorswill/StepSyntaxHighlighting",
     "engines": {
