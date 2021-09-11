@@ -22,7 +22,7 @@
 		{ "name":"entity.name.function", 	"match":"^[A-Z][^:.]*[:.]" },
 		{ "name":"entity.name.function", 	"match":"^initially:" },
 		{ "name":"entity.name.function", 	"match":"^\\[end\\]" },
-		{ "name":"keyword.other", 			"match":"\\?[a-zA-Z\/\\+]+" },
+		{ "name":"keyword.other", 			"match":"[\\?\\^][a-zA-Z\/\\+]+" },
 		{ "name":"keyword.control", 		"match":"\\[end\\]" },
 		{ "name":"keyword.control", 		"match":"\\[e?s\\]" },
 		{ "name":"keyword.control",			"match":"\\[or\\]" },
